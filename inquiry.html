@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="inquiry-container">
+        <h2>Send an Inquiry</h2>
+        <form>
+            <label for="topic">Select Your Inquiry Subject</label>
+            <select id="topic">
+                <option value="pools">Pools</option>
+                <option value="accessories">Accessories</option>
+                <option value="chemicals">Chemicals</option>
+                <option value="equipment">Equipment</option>
+                <option value="service">Service</option>
+                <option value="service">Other</option>
+            </select>
+
+            <!-- only made name and email mandatory-->
+            <label for="name">Your Name <span style="color: red;">*</span></label>
+            <input type="text" id="name" required>
+
+            <label for="email">Your Email <span style="color: red;">*</span></label>   
+                <!--see script below for JS validation-->
+            <input type="email" id="email" name="email" required>
+            <p id="email-error" style="color: red; font-size: 14px; display: none;">
+                Use format: user@myemail.com
+            </p>
+
+            <label for="phone">Your Phone</label>  <!--need to decide if to format it for uruguay-->
+            <input type="text" id="phone">      
+
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="5"></textarea>
+
+            <button type="submit">Send Inquiry</button>
+
+
+<!-- Javascript validation for the email format to make sure the format user enters is ok-->
+            <script>
+                document.getElementById("email").addEventListener("input", function() {
+                    let emailFormat = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    let errorMessage = document.getElementById("email-error");
+                    
+                    
+                if (!emailFormat.test(this.value) && this.value !== "") {
+                    errorMessage.style.display = "block"; 
+                } else {
+                            errorMessage.style.display = "none"; 
+                        }
+                });
+                         
+                </script>
+        </form>
+
+        <a href="index.html" class="back-button">← Back to Home</a>
+    </div>
+
+</body>
+</html>
