@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
-<body class="singlepages-body">  <!--had to add for the 5 pages to fix footer to be different than of main page and stay at bottom-->
+<body class="singlepages-body">  <!--had to add for the 6 pages to fix footer to be different than of main page and stay at bottom-->
 
     <!--for the navbar - to keep it identical to the one on the main page-->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">   <!--bootstrap for nav bar -->
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="logo1.png" alt="Logo 1">
-                <img src="logo2.png" alt="Logo 2">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="logo-container">
+                    <img src="images/logo1.png" alt="Logo 1">
+                </span>
+                <span class="logo-container">
+                    <img src="images/logo2.png" alt="Logo 2">
+                </span>
             </a>
+    
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">  <!--for the bottstrap to make hamburger menu-->
                 <span class="navbar-toggler-icon"></span>  <!--for using bootstrap-->
@@ -29,25 +34,26 @@
                     <li class="nav-item"><a class="nav-link" href="Products.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="Projects.html">Our Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html">About Us</a></li> 
                     <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!--Adding a title to the page. this will be in all 5 individual pages-->
+    <!--Adding a title to the page. this will be in all 6 individual pages - pools, products, etc-->
     <div class="container mt-5">    <!--To structure the page content and applying bootstrap styles-->
         <h1>Pools</h1>       <!--mt-5 is a class name and adds Top Margin with size of 5 between content and navbar-->
         <p>Welcome to our pool collection. Check our premium pools below.</p>
     </div>
 
 
-<!--POOLS SECTIONS MICHAEL TO MODIFY: I MADE 2 SECTIONS: INGROUND and ABOVE GROUND-->
+<!--POOLS SECTIONS MICHAEL TO MODIFY: I MADE 2 SECTIONS as example : INGROUND and ABOVE GROUND-->
 <!--I will use CATEGORY so in CSS I won't need to repaeat the same code for the sections, because
 they will have same structure to keep the same structure across all the pages for sections-->
 
 
-    <!--Inground Pools section-->    
+    <!--Inground Pools section. Michael to replace temp.jpeg with own images-->    
     <section class="category-section">    
         <h2>INGROUND POOLS</h2>
 
@@ -96,17 +102,14 @@ they will have same structure to keep the same structure across all the pages fo
 
 
     <!--Footer area with just a few parameters. large version stays only on the main page-->
-    <!--Smaller Footer same code for all 5 pages -->
+    <!--Smaller Footer same code for all 6 pages pools, products, services, etc-->
     <footer class="footer-small">
         <div class="footer-small-container">
             
             <p>&copy; 2025 Aquapunta Piscinas</p>
             <p><strong>Contact Us:</strong>
-                <a href="tel:094124110">094 124 110</a> |  <!--MICHAEL TO MODIFY SECTION-->
-                <a href="inquiry.html">info@aquapunta.com.uy</a>  <!--with this when user clicks he gets the inquiry form-->
-            <!--if we want in fotter to show the email address, and when clicked to open the
-            user's email browser, then we need to have here this command:
-            <a href="mailto:info@aquapunta.com.uy">info@aquapunta.com.uy</a>   ASK MICHAEL-->
+                <a href="tel:094124110">094 124 110</a> |  <!--MICHAEL TO MODIFY phone number on this section on all pages-->
+                <a href="inquiry.html">info@aquapunta.com.uy</a>  <!--opens the inquiry.html form -->
             </p>
         </div>
     </footer>

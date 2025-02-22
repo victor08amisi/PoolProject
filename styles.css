@@ -66,6 +66,23 @@ body {
     color: lightblue !important; 
 }
 
+/* LOGOS - adding this to make the background white, since the letters are black */
+
+.logo-container {
+    background-color: white;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px; /* space between logos */
+}
+
+.navbar-brand img {
+   
+    height: 50px;
+    display: block;
+}
+
+
 
 /* Hero Section  - main image on the main page */
 .hero {
@@ -205,7 +222,34 @@ body {
     }
 }
 
+/* The ABOUT US page */
+.about-section {
+    flex: 1;      /* to allow to add more content - text if needed, it will expand */
+    background-color: lightcyan;                 /* Michael, you can change it to white if you prefer */
+    width: 100%;
+    display: flex;
+    justify-content: center;          /* Maichael can change to left */
+    align-items: center;
+    
+    padding: 40px 20px;
 
+}
+
+.about-container {
+    max-width: 800px;
+    text-align: center;
+    background: white;
+    padding: 30px;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+    font-size: 32px;
+    color: #002244;
+    margin-bottom: 20px;
+}
 
 /* FOOTER section  with the 3 columns: Contact, search, follow-us */
 .footer {
@@ -242,7 +286,7 @@ body {
 
 .footer-column hr {
     width: 50px;
-    border: 1px solid white;
+    border: 1px solid white !important;
 }
 
 .footer-column ul {
@@ -266,8 +310,25 @@ body {
     text-decoration: underline;
 }
 
+/* for the inquiries hyperlink on the contact colummn, do override bootstrap setting and make "inquiry" white and bold */
 
-/* FOOTER SMALL at the very bottom of the 5 individual pages - to make it very small, basic */
+.footer-column .inquiry-button {
+    color: white; /* instead of blue - was not visible */
+    font-weight: bold; 
+    text-decoration: underline;
+    display: inline-block; 
+    margin-top: 10px; 
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-column .inquiry-button:hover {
+    color: lightblue; 
+    text-decoration: underline;
+}
+
+
+
+/* FOOTER SMALL at the very bottom of the 6 individual pages - to make it very small, basic */
 
 .footer-small {
     background-color: #002244; 
@@ -285,7 +346,7 @@ body {
  
 
 
-/*  THE 5 PAGES making the footer to be at very bottom */
+/*  THE 6 PAGES making the footer to be at very bottom */
 .singlepages-body {
     height: 100vh;
     display: flex;
@@ -294,13 +355,17 @@ body {
 
 
 /* INQUIRY FORM Page  its a separate page see: inquiry.html */
-.inquiry-container {
+
+body.inquiry-page {                    /* this part is to change default pink page to lightcyan */
+    background-color: lightcyan !important;
+}
+
+.inquiry-container { 
     max-width: 500px;
     margin: 50px auto;
     padding: 20px;
-    background: white;
-
-
+    background: white;              
+    
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     text-align: left;
@@ -346,17 +411,31 @@ body {
     background-color: #0056b3;
 }
 
-/* Back Button in Inquiry Form  takkes to the main page  */
+/* Back Button in Inquiry Form  takkes back to the main page  */
+/* Style the Back to Home Button */
 .back-button {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    color: #007bff;
+    display: block;
+    text-align: center;
+
+    width: 100%; 
+    max-width: 300px;
+    margin: 10px auto;
+
+
+    padding: 10px;
+    background-color: lightgray; 
+    color: black;
+    font-size: 16px;
+    text-decoration: none; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .back-button:hover {
-    text-decoration: underline;
+    background-color: darkgray;
+      
 }
+
 
 
 /* SOCIAL MEDIA ICONS */

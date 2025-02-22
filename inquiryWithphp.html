@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2>Send an Inquiry</h2>                 
+
+    <!--We will use PHP for the app for the inquiry form-->
+    <form action="inquiry.php" method="POST">
+    
+        <label for="topic">Select Your Inquiry Subject</label>
+        <select id="topic" name="topic"> 
+            <option value="pools">Pools</option>
+            <option value="accessories">Accessories</option>
+            <option value="chemicals">Chemicals</option>
+            <option value="equipment">Equipment</option>
+            <option value="service">Service</option>
+            <option value="other">Other</option>
+        </select>
+    
+        <!--we will make just Name and Email as required -->
+        <label for="name">Your Name <span style="color: red;">*</span></label>
+        <input type="text" id="name" name="name" required> 
+    
+        <label for="email">Your Email <span style="color: red;">*</span></label>   
+        <input type="email" id="email" name="email" required> 
+        <p id="email-error" style="color: red; font-size: 14px; display: none;">
+            Use format: user@myemail.com
+        </p>
+    
+        <label for="phone">Your Phone</label>
+        <input type="text" id="phone" name="phone">  
+    
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+    
+        <button type="submit">Send Inquiry</button>
+    
+    </form>
+
+    <!--for the hyperlink at the bottom of the form to go back to the main page-->
+    <a href="index.html" class="back-button">← Back to Home</a>
+    
+    <!--Adding JavaScript validation for the email format-->
+    <script>
+        document.getElementById("email").addEventListener("input", function() {
+            let emailFormat = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            let errorMessage = document.getElementById("email-error");
+    
+            if (!emailFormat.test(this.value) && this.value !== "") {
+                errorMessage.style.display = "block"; 
+            } else {
+                errorMessage.style.display = "none"; 
+            }
+        });
+    </script>
+    
+  
+</body>
+</html>

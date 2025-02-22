@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
-<body class="singlepages-body">    <!--for the 5 pages to fix footer to be different than of main page and stay at bottom-->
+
+<body class="singlepages-body">    <!--for the 6 pages to fix footer to be different than of main page and stay at bottom-->
 
 
-    <!--for the navbar - to keep it identical to the one on the main page-->
+    <!--for the navbar - to keep it identical to the one on the main page. Same code in all pages-->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="logo1.png" alt="Logo 1">
-                <img src="logo2.png" alt="Logo 2">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="logo-container">
+                    <img src="images/logo1.png" alt="Logo 1">
+                </span>
+                <span class="logo-container">
+                    <img src="images/logo2.png" alt="Logo 2">
+                </span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">  <!--for the bottstrap to make hamburger menu-->
@@ -36,25 +41,33 @@
         </div>
     </nav>
 
-    <!--Adding a title to the page-->
-    <div class="container mt-5">    <!--To structure the page content and applying bootstrap styles-->
-        <h1>Our Completed Pool Projects</h1>
-              <!--mt-5 is a class name and adds Top Margin with size of 5 between content and navbar-->
-        <p>Take a look at some of our completed pool projects. 
-            We take pride in delivering top-quality designs tailored to our customers needs.</p>
-            
-         <!--MICHAEL TO MODIFY CONTENT in <p> -->
-    </div>
+    <!-- Micahael to add content I just copied what's there now-->
+     <section class="about-section">
+        <div class="about-container">
 
-      <!--Footer area with just a few parameters. large version stays only on the main page-->
-    <!--Smaller Footer-->
+            <h1>About Aquapunta Piscinas</h1>
+            <p>
+                We are a young and dynamic company, we have been here in Uruguay since 2013. 
+                Our constant growth in the market is based on experience, professionalism and above all on TRUST. 
+                The high level of satisfaction of our clients is our pride and a reward for the product we deliver. 
+                Through technological advancement, we achieve economic and aesthetic functionality in our pools.
+                 Whether at home or for companies, at AQUAPUNTA you will find an option to install, repair and fully maintain your pool. 
+                 If you have problems with Spanish, we can provide assistance in English as well.
+            </p>
+        </div>
+    
+    </section>
+
+
+        <!--Footer area with just a few parameters. large version stays only on the main page-->
+    <!--Smaller Footer -identical in all 5 pages -->
     <footer class="footer-small">
         <div class="footer-small-container">
             
             <p>&copy; 2025 Aquapunta Piscinas</p>
             <p><strong>Contact Us:</strong>
                 <a href="tel:094124110">094 124 110</a> |  <!--MICHAEL TO MODIFY SECTION-->
-                <a href="mailto:info@aquapunta.com.uy">info@aquapunta.com.uy</a>
+                <a href="inquiry.html">info@aquapunta.com.uy</a>
             </p>
         </div>
     </footer>
