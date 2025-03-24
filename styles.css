@@ -1,604 +1,600 @@
 body {
-    font-family: Arial, sans-serif;     /* main page */
-    margin: 0;
-    padding: 0;
-    background-color: rgb(240, 233, 233);
+  font-family: Arial, sans-serif; /* main page */
+  margin: 0;
+  padding: 0;
+  background-color: rgb(240, 233, 233);
 }
 
 /* Navbar -at the top - formed using bootstrap so have to override it in some sections */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #002244 !important; /*the bootstrap bg-dark was overriding this blue color, added !important and removed bg-dark */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002244 !important; /*the bootstrap bg-dark was overriding this blue color, added !important and removed bg-dark */
 
-    padding: 10px 20px;
+  padding: 10px 20px;
 }
 
-.navbar .logo-container {       /* for the 2 logos aquapunta piscinas and piscinas Playas Uruguay */
-    display: flex;
-    align-items: center;
+.navbar .logo-container {
+  /* for the 2 logos aquapunta piscinas and piscinas Playas Uruguay */
+  display: flex;
+  align-items: center;
 }
 
-.navbar img {      /*  for LOGOS  - can modify size as needed */
-    height: 50px;
-    margin-right: 15px;
+.navbar img {
+  /*  for LOGOS  - can modify size as needed */
+  height: 50px;
+  margin-right: 15px;
 }
 
-.navbar .nav-links {    /* the menu items: home, pools, products, services, our projects, contact */
-    list-style: none;     /* keep it in case we will have list of topics under each item, to prevents bullets for each */
-    display: flex;
-    gap: 20px;
+.navbar .nav-links {
+  /* the menu items: home, pools, products, services, our projects, contact */
+  list-style: none; /* keep it in case we will have list of topics under each item, to prevents bullets for each */
+  display: flex;
+  gap: 20px;
 }
 
 /* to increase font size on navbar - need to override the bootstrap. It applies to the navbar */
 .navbar-nav .nav-link {
-    font-size: 18px;
-    font-weight: bold;
-    color: white !important;
-    padding: 10px 15px;
-
+  font-size: 18px;
+  font-weight: bold;
+  color: white !important;
+  padding: 10px 15px;
 }
 
 .navbar .nav-links li {
-    display: inline;
+  display: inline;
 }
 
-
-.navbar .nav-links a {     /* for the hyperlinks to the 5 pages -for custom nav links */
-    color: white !important;    /* the bootstrap overrides so must make it important to make it white */
-    text-decoration: none;
-    font-size: 18px;
-    padding: 8px 15px;
+.navbar .nav-links a {
+  /* for the hyperlinks to the 5 pages -for custom nav links */
+  color: white !important; /* the bootstrap overrides so must make it important to make it white */
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
 }
 
-
-
-.navbar .nav-links a:hover {     /* for the a - custom nav links */
-    color: lightblue !important;
-    background-color: #005599;
-    border-radius: 5px;
-    transition: color 0.3s ease-in-out;
+.navbar .nav-links a:hover {
+  /* for the a - custom nav links */
+  color: lightblue !important;
+  background-color: #005599;
+  border-radius: 5px;
+  transition: color 0.3s ease-in-out;
 }
 
-
-.navbar-dark .navbar-nav .nav-link:hover {       /* for the default bootstrap links */
-    color: lightblue !important; 
+.navbar-dark .navbar-nav .nav-link:hover {
+  /* for the default bootstrap links */
+  color: lightblue !important;
 }
 
 /* LOGOS - adding this to make the background white, since the letters are black */
 
 .logo-container {
-    background-color: white;
-    display: inline-block;
-    padding: 5px;
-    border-radius: 5px;
-    margin-right: 10px; /* space between logos */
+  background-color: white;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 10px; /* space between logos */
 }
 
 .navbar-brand img {
-   
-    height: 50px;
-    display: block;
+  height: 50px;
+  display: block;
 }
-
-
 
 /* Hero Section  - main image on the main page */
 .hero {
-    position: relative;
-    text-align: center;
-    color: white;
-    background: url('images/hero3.jpeg') no-repeat center center/cover;
-    height: 500px;
-    display: flex;
+  position: relative;
+  text-align: center;
+  color: white;
+  background: url("images/hero3.jpeg") no-repeat center center/cover;
+  height: 500px;
+  display: flex;
 
-    align-items: center;
-    justify-content: center; /* for the button and overlay to be in the centre */
-    padding: 20px;
+  align-items: center;
+  justify-content: center; /* for the button and overlay to be in the centre */
+  padding: 20px;
 }
 
+/*  button - Explore our pools om main page */
+.explore-button {
+  position: absolute;
+  top: 60%; /* adjusting the position of the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007bff;
+  color: white;
 
- /*  button - Explore our pools om main page */
- .explore-button {
-    position: absolute;
-    top: 60%;      /* adjusting the position of the button */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #007bff;
-    color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
 
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-
-
-    font-weight: bold;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 
 .explore-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Overlay Text - "Transform your backyard into a personal oasis" */
 .overlay-text {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 32px; 
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
 
-    font-weight: bold;
-    font-family: "Lucida Calligraphy", cursive;
+  font-weight: bold;
+  font-family: "Lucida Calligraphy", cursive;
 
-    text-align: center;
-    color: white;
-   /* background: rgba(0, 0, 0, 0.6); /* add if we want darker background for contrast */
-    padding: 15px 30px;
-    border-radius: 10px;
+  text-align: center;
+  color: white;
+  /* background: rgba(0, 0, 0, 0.6); /* add if we want darker background for contrast */
+  padding: 15px 30px;
+  border-radius: 10px;
 }
 
 /* Responsive code for the hero text overlay and button */
 @media (max-width: 768px) {
-    .overlay-text {
-        font-size: 32px; /* smaller font for mobile */
-        width: 90%;
-    }
-    .explore-button {
-        top: 65%;
-        font-size: 16px;
-        padding: 12px 25px;
-    }
+  .overlay-text {
+    font-size: 32px; /* smaller font for mobile */
+    width: 90%;
+  }
+  .explore-button {
+    top: 65%;
+    font-size: 16px;
+    padding: 12px 25px;
+  }
 }
-
-
 
 /* Feature Section on MAIN page the 5 boxes (pools, equipment, water treatment, services, our projects
  to keep All 5 items in One row */
 
 .featured-section {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* can adjust the spacing between items  but this looks ok to me */
-    flex-wrap: wrap; /* for smaller screens */
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* can adjust the spacing between items  but this looks ok to me */
+  flex-wrap: wrap; /* for smaller screens */
+  padding: 20px;
 }
 
 /* Feature  - the 5 Boxes styling */
-.featured-item {          /* .featured-item is for the whole container */
-    flex: 1; 
-    min-width: 180px;
-    max-width: 200px;
-    text-align: center;
-    display: flex;
+.featured-item {
+  /* .featured-item is for the whole container */
+  flex: 1;
+  min-width: 180px;
+  max-width: 200px;
+  text-align: center;
+  display: flex;
 
-    flex-direction: column;   /* to put content vertically */
-    justify-content: space-between;  /* to have even spece */
+  flex-direction: column; /* to put content vertically */
+  justify-content: space-between; /* to have even spece */
 
-    align-items: center;
-    padding: 15px;
-    background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 /* Ensure the images are same height*/
 .featured-item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;  /* this is for scaling the image */
-    border-radius: 5px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* this is for scaling the image */
+  border-radius: 5px;
 }
 
-
-.featured-item .btn {    /* the Explore button */
-    margin-top: auto;  
-    padding: 10px;
-    background-color: #005599;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-
+.featured-item .btn {
+  /* the Explore button */
+  margin-top: auto;
+  padding: 10px;
+  background-color: #005599;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .featured-item .btn:hover {
-    background-color: #007bff/* or use #002244 to be like navbar, but too dark i think */
-                /* with 007bff it's like the Explore Our Pools button */ 
+  background-color: #007bff; /* or use #002244 to be like navbar, but too dark i think */
+  /* with 007bff it's like the Explore Our Pools button */
 }
 
 /* Making the features items boxes RESPONSIVE */
 @media (max-width: 992px) {
-    .featured-item {
-        width: 45%; /* will display 2 items per row on tablets */
-    }
+  .featured-item {
+    width: 45%; /* will display 2 items per row on tablets */
+  }
 }
 
 @media (max-width: 600px) {
-    .featured-item {
-        width: 100%; /* to stack items vertically on small screens */
-    }
+  .featured-item {
+    width: 100%; /* to stack items vertically on small screens */
+  }
 }
 
 /* The ABOUT US page */
 .about-section {
-    flex: 1;      /* to allow to add more content - text if needed, it will expand */
-    background-color: lightcyan;                 /* Michael, you can change it to white if you prefer */
-    width: 100%;
-    display: flex;
-    justify-content: center;          /* Maichael can change to left */
-    align-items: center;
-    
-    padding: 40px 20px;
+  flex: 1; /* to allow to add more content - text if needed, it will expand */
+  background-color: lightcyan; /* Michael, you can change it to white if you prefer */
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Maichael can change to left */
+  align-items: center;
 
+  padding: 40px 20px;
 }
 
 .about-container {
-    max-width: 800px;
-    text-align: center;
-    background: white;
-    padding: 30px;
+  max-width: 800px;
+  text-align: center;
+  background: white;
+  padding: 30px;
 
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-container h1 {
-    font-size: 32px;
-    color: #002244;
-    margin-bottom: 20px;
+  font-size: 32px;
+  color: #002244;
+  margin-bottom: 20px;
 }
 
 /* FOOTER section  with the 3 columns: Contact, search, follow-us */
 .footer {
-    background-color: #002244;
-    color: white;
-    padding: 10px 0;
-    font-size: 16px;
+  background-color: #002244;
+  color: white;
+  padding: 10px 0;
+  font-size: 16px;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 
+  max-width: 1200px;
 
-    max-width: 1200px;
-
-    margin: 0 auto;
-    padding: 20px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /*  the 3 Columns individualy styling on the bottom of MAIN page */
 .footer-column {
-    flex: 1;
-    min-width: 250px;
-    margin-bottom: 20px;
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
 }
 
 .footer-column h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .footer-column hr {
-    width: 50px;
-    border: 1px solid white !important;
+  width: 50px;
+  border: 1px solid white !important;
 }
 
 .footer-column ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-column ul li {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 /* when hovering under items like under search, a white line showing it's hyperlink is popping */
-.footer-column ul li a {   
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;  
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
-.footer-column ul li a:hover {  /* changing color and shows the underline for the hyperlink */
-    color: lightblue;
-    text-decoration: underline;
+.footer-column ul li a:hover {
+  /* changing color and shows the underline for the hyperlink */
+  color: lightblue;
+  text-decoration: underline;
 }
 
 /* for the inquiries hyperlink on the contact colummn, do override bootstrap setting and make "inquiry" white and bold */
 
 .footer-column .inquiry-button {
-    color: white; /* instead of blue - was not visible */
-    font-weight: bold; 
-    text-decoration: underline;
-    display: inline-block; 
-    margin-top: 10px; 
-    transition: color 0.3s ease-in-out;
+  color: white; /* instead of blue - was not visible */
+  font-weight: bold;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 10px;
+  transition: color 0.3s ease-in-out;
 }
 
 .footer-column .inquiry-button:hover {
-    color: lightblue; 
-    text-decoration: underline;
+  color: lightblue;
+  text-decoration: underline;
 }
-
-
 
 /* FOOTER SMALL at the very bottom of the 6 individual pages - to make it very small, basic */
 
 .footer-small {
-    background-color: #002244; 
-    color: white;
-    text-align: center; 
-    padding: 10px 0; 
-    font-size: 14px; 
-    margin-top: auto;    /* to push footer to the bottom  */
+  background-color: #002244;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  margin-top: auto; /* to push footer to the bottom  */
 }
 
 .footer-small-container {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
- 
-
 
 /*  THE 6 PAGES making the footer to be at very bottom */
 .singlepages-body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
 
 /* INQUIRY FORM Page  its a separate page see: inquiry.html */
 
-body.inquiry-page {                    /* this part is to change default pink page to lightcyan */
-    background-color: lightcyan !important;
+body.inquiry-page {
+  /* this part is to change default pink page to lightcyan */
+  background-color: lightcyan !important;
 }
 
-.inquiry-container { 
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;              
-    
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    text-align: left;
+.inquiry-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: left;
 }
 
 .inquiry-container h2 {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .inquiry-container label {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .inquiry-container input,
 .inquiry-container select,
 .inquiry-container textarea {
-    width: 100%;
-    padding: 10px;
+  width: 100%;
+  padding: 10px;
 
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid lightgrey;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .inquiry-container button {
-    margin-top: 15px;
-    background-color: #007bff;
-    color: white;
+  margin-top: 15px;
+  background-color: #007bff;
+  color: white;
 
-
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .inquiry-container button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Back Button in Inquiry Form  takkes back to the main page  */
 /* Style the Back to Home Button */
 .back-button {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 
-    width: 100%; 
-    max-width: 300px;
-    margin: 10px auto;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
 
-
-    padding: 10px;
-    background-color: lightgray; 
-    color: black;
-    font-size: 16px;
-    text-decoration: none; 
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+  padding: 10px;
+  background-color: lightgray;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .back-button:hover {
-    background-color: darkgray;
-      
+  background-color: darkgray;
 }
-
-
 
 /* SOCIAL MEDIA ICONS */
 .social-icons {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
-.social-icons img {   /* can modify size as needed */
-    width: 30px;
-    height: 30px;
+.social-icons img {
+  /* can modify size as needed */
+  width: 30px;
+  height: 30px;
 }
 
 /* Footer Bottom */
 .footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 12px;
-    border-top: 1px solid white;
-    margin-top: 20px;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 12px;
+  border-top: 1px solid white;
+  margin-top: 20px;
 }
 
 /* Responsive Footer */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* For the TOP <h1> Titles of the 5 pages, settings for the appearance */
-    h1 {
-        font-size: 40px;
-        font-weight: bold;
-        text-align: left;
-        padding-left: 30px;
-        color: #002244 !important;
-        margin-top: 25px;
-        margin-bottom: 60px;
-
-    }
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 30px;
+  color: #002244 !important;
+  margin-top: 25px;
+  margin-bottom: 60px;
+}
 
 /* to increase font for the <p> that is right under the <h1> on the 5 pages  */
-    h1 + p {
-        font-size: 20px;
-        text-align: left;
-        margin-left: 30px;
-        max-width: 66%;    /* so the <p> line is not too wide over the width of page. can change that  */
-        line-height: 1.6; 
-        margin-top: 30px;
-
-    }
-
+h1 + p {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 30px;
+  max-width: 66%; /* so the <p> line is not too wide over the width of page. can change that  */
+  line-height: 1.6;
+  margin-top: 30px;
+}
 
 /*  PRODUCTS.HTML PAGE  and POOLS.html - both with same format for sections - like pumps, chemicals, filters, etc */
 /* therefore using "CATEGORY" TO STRUCTURE THE SECTIONS FOR IMAGES AND DESCRIPTIONS
 FOR both PRODUCTS PAGE, POOLS PAGE */
 
 .category-section {
-    margin-bottom: 40px;
-    text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .category-section h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 60px;
-    color: #002244;     /* can change, but this matches the rest of the site */
-    margin-top: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  color: #002244; /* can change, but this matches the rest of the site */
+  margin-top: 30px;
 }
 
 /* to display the products in a row in each section */
 .category-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;      /* can increase the space between images */
-   
-    padding-left: 40px;
-    padding-right: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* can increase the space between images */
 
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 /* display box for each individual product keeping same size */
 .category-item {
-    flex: 1;
-    min-width: 200px;
-    max-width: 250px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
 
-    text-align: center;
+  text-align: center;
 }
 
-.category-item img {      /* may need to adjust but with this setting all images on the page will be the same size */
-    width: 100%;
-    height: 180px;
-    object-fit: cover;  /* cover is to ensure it scales to fit the sizes we gave */
-    border-radius: 5px;
+.category-item img {
+  /* may need to adjust but with this setting all images on the page will be the same size */
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* cover is to ensure it scales to fit the sizes we gave */
+  border-radius: 5px;
 }
 
 .category-item p {
-    font-size: 18px;
-    margin-top: 25px;
+  font-size: 18px;
+  margin-top: 25px;
 }
-
 
 /* SERVICES.html PAGE: will have 3 SECTIONS installations, repairs, maintenance - 
 having the image in middle then description */
 
 .service-section {
-    text-align: center; 
-    padding: 40px 20px;
-    margin-bottom: 60px;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 60px;
 }
 
 .service-section h2 {
-    font-size: 32px;
-    font-weight: bold;
+  font-size: 32px;
+  font-weight: bold;
 
-    margin-bottom: 30px;
-   
-    color: #002244;
+  margin-bottom: 30px;
+
+  color: #002244;
 }
 
 .service-content img {
-    width: 80%;       /* can change the size of the image */
-    max-width: 600px;    /* can change the size but then modify height too */ 
-    height: 350px;    
-    object-fit: cover;   
-    border-radius: 10px; 
-   margin-bottom: 40px; 
+  width: 80%; /* can change the size of the image */
+  max-width: 600px; /* can change the size but then modify height too */
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 40px;
 }
-
 
 .service-section p {
-    
-    font-size: 20px;
-    margin: 40px auto 0;
-    max-width: 800px;
+  font-size: 20px;
+  margin: 40px auto 0;
+  max-width: 800px;
 
-    line-height: 1.6;
+  line-height: 1.6;
 }
-
 
 /* OUR PROJECTS PAGE - GALLERY - just images made to look like a grid  */
 
 .projects-gallery {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-
-    gap: 40px;         /* can change the space between images */
-    padding: 20px;
-    margin-bottom: 20px;
+  gap: 40px; /* can change the space between images */
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 /* we want to display all images the same size images */
 .projects-gallery img {
-    width: 300px; 
-    height: 200px; 
-    object-fit: cover; 
-    border-radius: 5px; 
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    display: none;
+}
+#cookie-banner button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
 }

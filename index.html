@@ -59,6 +59,7 @@
  <!--Michael can chnage titles and the short content-->
 
 <section class="featured-section">
+    
     <div class="featured-item">
         
         <h3>Pools</h3>
@@ -93,8 +94,27 @@
         <img src="images/ourproj_section.jpg" class="img-fluid" alt="Projects">
         <p>See our completed pools</p>
         <a href="Projects.html" class="btn btn-secondary">Explore</a>
+        
     </div>
+    
 </section>
+<div id="cookie-banner">
+    This website uses cookies to improve your experience.
+    <button onclick="acceptCookies()">Accept</button>
+</div>
+
+<script>
+    function acceptCookies() {
+        localStorage.setItem("cookiesAccepted", "true");
+        document.getElementById("cookie-banner").style.display = "none";
+    }
+
+    window.onload = function() {
+        if (!localStorage.getItem("cookiesAccepted")) {
+            document.getElementById("cookie-banner").style.display = "block";
+        }
+    };
+</script>
 
 
 
