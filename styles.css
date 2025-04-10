@@ -602,3 +602,24 @@ having the image in middle then description */
     object-fit: cover; 
     border-radius: 5px; 
 }
+
+.category-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* spacing between items */
+}
+
+.category-item {
+    flex: 0 1 200px; /* max width for each item */
+    text-align: center;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
