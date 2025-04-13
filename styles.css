@@ -492,34 +492,6 @@ FOR both PRODUCTS PAGE, POOLS PAGE */
   margin-top: 30px;
 }
 
-/* to display the products in a row in each section */
-.category-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px; /* can increase the space between images */
-
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-/* display box for each individual product keeping same size */
-.category-item {
-  flex: 1;
-  min-width: 200px;
-  max-width: 250px;
-
-  text-align: center;
-}
-
-.category-item img {
-  /* may need to adjust but with this setting all images on the page will be the same size */
-  width: 100%;
-  height: 180px;
-  object-fit: cover; /* cover is to ensure it scales to fit the sizes we gave */
-  border-radius: 5px;
-}
-
 .category-item p {
   font-size: 18px;
   margin-top: 25px;
@@ -590,6 +562,28 @@ having the image in middle then description */
     padding: 15px;
     display: none;
 }
+
+.category-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* spacing between items */
+}
+
+.category-item {
+    flex: 0 1 200px; /* max width for each item */
+    text-align: center;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
 #cookie-banner button {
     background: #4CAF50;
     color: white;
