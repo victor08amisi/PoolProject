@@ -579,22 +579,24 @@ having the image in middle then description */
   object-fit: cover;
   border-radius: 5px;
 }
-#cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    display: none;
+
+.category-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* spacing between items */
 }
-#cookie-banner button {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-left: 10px;
+
+.category-item {
+    flex: 0 1 200px; /* max width for each item */
+    text-align: center;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
