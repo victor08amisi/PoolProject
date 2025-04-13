@@ -1,80 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inquiry Form</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body class="inquiry-page">          <!--added in order to modify background color, bootstrap forced light pink -->
+  <body class="inquiry-page">
+    <!--added in order to modify background color, bootstrap forced light pink -->
 
     <div class="inquiry-container">
-        <h2>Send an Inquiry</h2>
-        <!--Note that with mialto: the client will get a mail message popping up, and he needs toclick send-->
-        <!--Replace the action="mailto: with your email, or info@aquapunta...."-->
+      <h2>Send an Inquiry</h2>
+      <!--Note that with mialto: the client will get a mail message popping up, and he needs toclick send-->
+      <!--Replace the action="mailto: with your email, or info@aquapunta...."-->
 
-        <form id="inquiry-form" action="mailto:jonathan3j28@hotmail.com?subject=Inquiry" 
-                method="POST" enctype="text/plain">
+      <form
+        id="inquiry-form"
+        action="mailto:jonathan3j28@hotmail.com?subject=Inquiry"
+        method="POST"
+        enctype="text/plain"
+      >
+        <label for="topic">Select Your Inquiry Subject</label>
+        <!--for dropdown box-->
+        <select id="topic" name="subject">
+          <option value="Pools">Pools</option>
+          <option value="Accessories">Accessories</option>
+          <option value="Chemicals">Chemicals</option>
+          <option value="Equipment">Equipment</option>
+          <option value="Service">Service</option>
+          <option value="Other">Other</option>
+        </select>
 
-            <label for="topic">Select Your Inquiry Subject</label>     <!--for dropdown box-->
-            <select id="topic" name="subject">
-                <option value="Pools">Pools</option>
-                <option value="Accessories">Accessories</option>
-                <option value="Chemicals">Chemicals</option>
-                <option value="Equipment">Equipment</option>
-                <option value="Service">Service</option>
-                <option value="Other">Other</option>
-            </select>
+        <label for="name">Your Name <span style="color: red">*</span></label>
+        <input type="text" id="name" name="name" required />
 
-            <label for="name">Your Name <span style="color: red;">*</span></label>
-            <input type="text" id="name" name="name" required>
+        <label for="email">Your Email <span style="color: red">*</span></label>
+        <input type="email" id="email" name="email" required />
+        <p id="email-error" style="color: red; font-size: 14px; display: none">
+          Use format: user@myemail.com
+        </p>
 
-            <label for="email">Your Email <span style="color: red;">*</span></label>
-            <input type="email" id="email" name="email" required>
-            <p id="email-error" style="color: red; font-size: 14px; display: none;">
-                Use format: user@myemail.com
-            </p>
+        <label for="phone">Your Phone</label>
+        <input type="text" id="phone" />
 
-            <label for="phone">Your Phone</label>
-            <input type="text" id="phone">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
 
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5"></textarea>
+        <!--Telling the user what to do for submitting -->
+        <p
+          style="
+            font-size: 14px;
+            color: blue;
+            font-weight: bold;
+            margin-top: 10px;
+          "
+        >
+          After clicking "Send Inquiry", please click "Send" in the email to
+          complete the process.
+        </p>
 
-             <!--Telling the user what to do for submitting -->
-    <p style="font-size: 14px; color: blue; font-weight: bold; margin-top: 10px;">
-         After clicking "Send Inquiry", please click "Send" in the email to complete the process.
-    </p>
+        <button type="submit">Send Inquiry</button>
+      </form>
 
-            <button type="submit">Send Inquiry</button>
-        </form>
-
-        <a href="index.html" class="back-button">← Back to Main Page</a>
+      <a href="index.html" class="back-button">← Back to Main Page</a>
     </div>
 
     <!--JavaScript to validate email format and clear form -->
     <script>
-        document.getElementById("email").addEventListener("input", function () {
-            let emailFormat = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            let errorMessage = document.getElementById("email-error");
+      document.getElementById("email").addEventListener("input", function () {
+        let emailFormat = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let errorMessage = document.getElementById("email-error");
 
-            if (!emailFormat.test(this.value) && this.value !== "") {
-                errorMessage.style.display = "block";
-            } else {
-                errorMessage.style.display = "none";
-            }
-        });
+        if (!emailFormat.test(this.value) && this.value !== "") {
+          errorMessage.style.display = "block";
+        } else {
+          errorMessage.style.display = "none";
+        }
+      });
 
-        //  Function for clearing the form after submission
-        document.getElementById("inquiry-form").addEventListener("submit", function (event) {
-            setTimeout(() => {
-                this.reset();
-            }, 1500); // Delay to ensure the mailto link opens before clearing the form
+      //  Function for clearing the form after submission
+      document
+        .getElementById("inquiry-form")
+        .addEventListener("submit", function (event) {
+          setTimeout(() => {
+            Ç;
+            this.reset();
+          }, 1500); // Delay to ensure the mailto link opens before clearing the form
         });
     </script>
-
-</body>
-
+  </body>
 </html>
